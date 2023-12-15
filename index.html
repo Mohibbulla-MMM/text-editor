@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+
+    </script>
+    <style>
+        #font-size-id {
+            /* height: 26px; */
+            overflow-y: visible !important;
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-800 ">
+    <header class=""></header>
+    <main class="bg-[#94C4FE] px-20 py-8 mx-auto max-w-[800px]">
+        <div>
+            <h1 class="text-3xl text-center font-medium capitalize">my text <span class="italic">editor</span> </h1>
+        </div><!-- title container-->
+        <div class="max-w-[600px]  mx-auto mt-5 p-5 bg-blue-200 rounded-xl">
+
+            <div class="flex justify-between items-center gap-[2px] px-3  border-b-2 border-gray-500 mb-5  pb-5">
+                <!-- ---------------------- text decoration container --------------------------  -->
+                <div class="flex gap-4 items-center bg-slate-400 p-4 rounded-md">
+                    <i id="bold-id" class=" bg-white rounded-sm p-1 hover:cursor-pointer fa-solid fa-b"
+                        title="Text Bold"></i>
+                    <!-- bold icon-->
+                    <i id="italic-id" class=" bg-white rounded-sm p-1 hover:cursor-pointer fa-solid fa-italic"></i>
+                    <!-- italic icon-->
+                    <i id="underline-id"
+                        class=" bg-white rounded-sm p-1 hover:cursor-pointer fa-solid fa-underline"></i>
+                    <!-- underline icon-->
+                    <i id="highlight-id"
+                        class=" bg-white rounded-sm p-1 hover:cursor-pointer fa-solid fa-highlighter"></i>
+                </div><!--text decoration container-->
+                <!-- ---------------- text align container -----------------  -->
+                <div class="flex gap-4 items-center  bg-slate-400 p-4 rounded-md">
+                    <i id="left-id" class=" bg-white rounded-sm p-1 hover:cursor-pointer fa-solid fa-align-left"></i>
+                    <!-- left align icon-->
+                    <i id="center-id"
+                        class=" bg-white rounded-sm p-1 hover:cursor-pointer fa-solid fa-align-center"></i>
+                    <!-- center align icon-->
+                    <i id="right-id" class=" bg-white rounded-sm p-1 hover:cursor-pointer fa-solid fa-align-right"></i>
+                    <!-- right align icon-->
+                    <i id="justify-id"
+                        class=" bg-white rounded-sm p-1 hover:cursor-pointer fa-solid fa-align-justify"></i>
+                    <!--justity align icon-->
+                </div><!-- text align container-->
+                <!-- ------------------font color, size, case container --------------  -->
+                <div class="flex gap-4 items-center  bg-slate-400 p-4 py-[14px] rounded-md">
+                    <input id="font-size-id"
+                        class=" bg-white rounded-sm  hover:cursor-pointer w-10 border-2 border-gray-500 outline-0 "
+                        placeholder="12" type="number" min="12" max="100">
+                    <p id="case-id" class=" hover:cursor-pointer  bg-white rounded-sm px-1 p-0 font-semibold">aA</p>
+                    <input id="color-id" class=" hover:cursor-pointer bg-white rounded-sm   w-8   p-0 border-0"
+                        type="color">
+                </div><!---->
+            </div><!-- text editor option bar-->
+            <!-- ------------------------------ text area container ---------------------------  -->
+            <div class="w-full block  m-0 ">
+                <textarea id="text-area-id" name="" rows="14" class="block w-full h-full bg-white m-0 p-5 border-2  border-black outline-green-700 rounded-0 rounded-md
+                ">
+            </textarea>
+            </div>
+        </div><!-- text editor main container-->
+    </main>
+
+    <div content-edit="true">ffffffffffffffffffffff dfdf </div>
+    <style>
+        .a {
+            font-weight: bold;
+            font-style: italic;
+            text-transform: uppercase;
+            text-transform: lowercase;
+            text-transform: capitalize;
+            /* text-transform: each; */
+        }
+    </style>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

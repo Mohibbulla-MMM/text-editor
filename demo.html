@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #editor {
+            border: 1px solid #ccc;
+            min-height: 200px;
+            padding: 10px;
+        }
+
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <main>
+
+        <div id="editor" contenteditable="true"></div>
+        <button id="boldButton">Bold</button>
+        <button id="italicButton">Italic</button>
+        <button id="underlineButton">Underline</button>
+        <button id="bg">Underline</button>
+        <script src="script.js"></script>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const editor = document.getElementById('editor');
+            const boldButton = document.getElementById('boldButton');
+            const italicButton = document.getElementById('italicButton');
+            const underlineButton = document.getElementById('underlineButton');
+            const bg = document.getElementById('bg');
+
+            boldButton.addEventListener('click', () => {
+                document.execCommand('bold', false, null);
+            });
+
+            italicButton.addEventListener('click', () => {
+                document.execCommand('italic', false, null);
+            });
+
+            underlineButton.addEventListener('click', () => {
+                document.execCommand('underline', false, null);
+            });
+            bg.addEventListener('click', () => {
+                document.execCommand('red', false, null);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
